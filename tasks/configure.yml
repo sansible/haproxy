@@ -1,0 +1,9 @@
+---
+
+- name: Start Haproxy
+  become: yes
+  service:
+    enabled: true
+    name: haproxy
+    state: started
+  when: sansible_haproxy_start_on_boot == true

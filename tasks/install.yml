@@ -1,0 +1,13 @@
+---
+
+- name: Add Haproxy PPA
+  become: yes
+  apt_repository:
+    repo: "{{ sansible_haproxy_ppa }}"
+    update_cache: true
+
+- name: Install Haproxy
+  become: yes
+  apt:
+    pkg: "haproxy={{ sansible_haproxy_version }}"
+    state: present

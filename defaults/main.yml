@@ -1,1 +1,5 @@
 ---
+
+sansible_haproxy_ppa: ppa:vbernat/haproxy-1.8
+sansible_haproxy_start_on_boot: yes
+sansible_haproxy_version: 1.8.*
