@@ -1,1 +1,11 @@
 ---
+
+- name: Install HAProxy
+  include: install.yml
+  tags:
+    - build
+
+- name: Configure HAProxy
+  include: configure.yml
+  tags:
+    - configure
